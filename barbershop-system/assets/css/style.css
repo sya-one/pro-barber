@@ -1,0 +1,591 @@
+/* ============================================================
+   THE PROFESSIONAL BARBERSHOP – COMPLETE STYLESHEET
+   Luxury dark theme · Green accent #0FA958
+
+   Author  - Siyabonga Chonco
+   Company - Horsemen Technologies
+   Website - https://horsementech.com
+   ============================================================ */
+
+:root{
+
+--surface:#111111;
+--surface-2:#151515;
+
+--card-bg:
+linear-gradient(
+180deg,
+rgba(255,255,255,.02),
+rgba(255,255,255,.01)
+);
+
+--border-soft:
+rgba(255,255,255,.06);
+
+--shadow-soft:
+0 12px 40px rgba(0,0,0,.35);
+
+--shadow-green:
+0 12px 45px rgba(15,169,88,.22);
+
+--radius-sm:10px;
+--radius-md:18px;
+--radius-lg:24px;
+
+--transition:
+all .25s cubic-bezier(.2,.8,.2,1);
+
+}
+
+/* ===============================
+GLOBAL
+================================ */
+
+html{
+
+scroll-behavior:smooth;
+
+}
+
+body{
+
+background:
+
+radial-gradient(
+circle at top left,
+rgba(15,169,88,.05),
+transparent 35%
+),
+
+radial-gradient(
+circle at bottom right,
+rgba(15,169,88,.04),
+transparent 30%
+),
+
+var(--black);
+
+}
+
+::selection{
+
+background:var(--green);
+
+color:white;
+
+}
+
+/* ===============================
+NAVBAR
+================================ */
+
+.top-navbar{
+
+backdrop-filter:blur(18px);
+
+background:
+rgba(15,15,15,.88);
+
+box-shadow:
+0 6px 25px rgba(0,0,0,.35);
+
+}
+
+.top-navbar .navbar-brand{
+
+letter-spacing:.4px;
+
+}
+
+.top-navbar .btn-outline-light{
+
+border-radius:999px;
+
+}
+
+/* ===============================
+SIDEBAR
+================================ */
+
+.sidebar{
+
+background:
+
+linear-gradient(
+180deg,
+rgba(20,20,20,.96),
+rgba(8,8,8,.99)
+);
+
+backdrop-filter:
+
+blur(18px);
+
+}
+
+.sidebar::-webkit-scrollbar{
+
+width:4px;
+
+}
+
+.sidebar .nav-link{
+
+border-radius:14px;
+
+transition:var(--transition);
+
+position:relative;
+
+}
+
+.sidebar .nav-link:hover{
+
+transform:
+translateX(6px);
+
+background:
+
+rgba(15,169,88,.08);
+
+}
+
+.sidebar .nav-link.active{
+
+background:
+
+linear-gradient(
+90deg,
+rgba(15,169,88,.92),
+rgba(15,169,88,.70)
+);
+
+box-shadow:
+
+var(--shadow-green);
+
+}
+
+.sidebar .nav-link.active::before{
+
+content:"";
+
+position:absolute;
+
+left:-10px;
+
+top:8px;
+
+bottom:8px;
+
+width:4px;
+
+background:white;
+
+border-radius:20px;
+
+}
+
+/* ===============================
+MAIN CONTENT
+================================ */
+
+.main-content{
+
+background:
+
+transparent;
+
+animation:
+fadeIn .35s ease;
+
+}
+
+@keyframes fadeIn{
+
+from{
+
+opacity:.4;
+
+transform:
+translateY(8px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:none;
+
+}
+
+}
+
+/* ===============================
+CARDS
+================================ */
+
+.card{
+
+background:
+
+var(--card-bg);
+
+border:
+
+1px solid var(--border-soft);
+
+border-radius:
+
+var(--radius-md);
+
+box-shadow:
+
+var(--shadow-soft);
+
+backdrop-filter:
+
+blur(14px);
+
+transition:
+
+var(--transition);
+
+}
+
+.card:hover{
+
+transform:
+
+translateY(-3px);
+
+box-shadow:
+
+0 20px 60px rgba(0,0,0,.45);
+
+}
+
+.card-header{
+
+padding:1rem 1.4rem;
+
+font-weight:600;
+
+}
+
+.card-body{
+
+padding:1.5rem;
+
+}
+
+/* ===============================
+STAT CARDS
+================================ */
+
+.stat-card{
+
+overflow:hidden;
+
+position:relative;
+
+}
+
+.stat-card::after{
+
+content:"";
+
+position:absolute;
+
+width:180px;
+
+height:180px;
+
+right:-70px;
+
+top:-60px;
+
+background:
+
+rgba(15,169,88,.08);
+
+border-radius:50%;
+
+}
+
+.stat-card h5{
+
+font-size:2rem;
+
+font-weight:700;
+
+}
+
+/* ===============================
+TABLES
+================================ */
+
+.table{
+
+border-collapse:
+separate;
+
+border-spacing:
+0 8px;
+
+}
+
+.table tbody tr{
+
+background:
+
+rgba(255,255,255,.015);
+
+transition:
+
+var(--transition);
+
+}
+
+.table tbody tr:hover{
+
+transform:
+
+scale(.995);
+
+background:
+
+rgba(15,169,88,.04);
+
+}
+
+.table td,
+.table th{
+
+border:none !important;
+
+}
+
+/* ===============================
+FORMS
+================================ */
+
+.form-control,
+.form-select {
+    height: 52px;
+    background: #1a1a1a !important;
+    color: #ffffff !important;
+    border: 1px solid var(--green) !important;
+    border-radius: 12px;
+    padding: 0.5rem 0.9rem;
+    font-size: 0.92rem;
+    transition: var(--transition);
+    box-shadow: none !important;
+}
+.form-control:focus,
+.form-select:focus {
+    background: #222222 !important;
+    border-color: #13D86F !important;
+    box-shadow: 0 0 0 4px rgba(15, 169, 88, 0.15) !important;
+    transform: translateY(-1px);
+}
+.form-control::placeholder {
+    color: #888888 !important;
+    opacity: 1;
+}
+.form-select option {
+    background: #1a1a1a;
+    color: #ffffff;
+}
+textarea.form-control {
+    min-height: 120px;
+    height: auto;
+}
+
+/* DataTables search / length selects */
+.dataTables_wrapper .dataTables_length select,
+.dataTables_wrapper .dataTables_filter input {
+    background: #1a1a1a !important;
+    color: #ffffff !important;
+    border: 1px solid var(--green) !important;
+    border-radius: 8px;
+    padding: 0.35rem 0.6rem;
+    font-size: 0.85rem;
+    height: auto;
+}
+
+/* ===============================
+BUTTONS
+================================ */
+
+.btn{
+
+border-radius:14px;
+
+font-weight:600;
+
+transition:
+
+var(--transition);
+
+}
+
+.btn:hover{
+
+transform:
+
+translateY(-2px);
+
+}
+
+.btn-success{
+
+background:
+
+linear-gradient(
+135deg,
+var(--green),
+#13D86F
+);
+
+box-shadow:
+
+var(--shadow-green);
+
+}
+
+.btn-outline-success{
+
+border-width:2px;
+
+}
+
+/* ===============================
+MODALS
+================================ */
+
+.modal-content{
+
+backdrop-filter:
+
+blur(18px);
+
+box-shadow:
+
+0 30px 80px rgba(0,0,0,.45);
+
+}
+
+/* ===============================
+SEARCH
+================================ */
+
+.dataTables_filter input{
+
+min-width:280px;
+
+}
+
+/* ===============================
+LOADING
+================================ */
+
+.skeleton{
+
+background:
+
+linear-gradient(
+90deg,
+#121212,
+#222,
+#121212
+);
+
+background-size:
+300%;
+
+animation:
+shimmer 1.5s infinite;
+
+}
+
+@keyframes shimmer{
+
+0%{
+
+background-position:
+100%;
+
+}
+
+100%{
+
+background-position:
+-100%;
+
+}
+
+}
+
+/* ===============================
+EMPTY STATES
+================================ */
+
+.empty-state{
+
+padding:80px;
+
+text-align:center;
+
+}
+
+.empty-state h3{
+
+font-size:1.5rem;
+
+margin-bottom:12px;
+
+}
+
+/* ===============================
+RESPONSIVE
+================================ */
+
+@media(max-width:768px){
+
+.card-body{
+
+padding:1rem;
+
+}
+
+.sidebar .nav-link{
+
+padding:14px;
+
+}
+
+.table{
+
+font-size:.82rem;
+
+}
+
+}
+
+@media(max-width:576px){
+
+.top-navbar{
+
+padding:.75rem;
+
+}
+
+.btn{
+
+width:100%;
+
+}
+
+}

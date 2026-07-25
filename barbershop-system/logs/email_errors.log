@@ -1,0 +1,4 @@
+2026-06-02 12:15:35 - To: siyabongac@horsementech.com - Error: SMTP Error: Could not connect to SMTP host. Failed to connect to server SMTP server error: Failed to connect to server SMTP code: 61 Additional SMTP info: Connection refused
+2026-06-02 12:19:18 - To: siyabongac@horsementech.com - Error: SMTP Error: Could not connect to SMTP host. Failed to connect to server SMTP server error: Failed to connect to server SMTP code: 61 Additional SMTP info: Connection refused
+2026-06-02 12:20:14 - To: siyabongac@horsementech.com - Error: SMTP Error: Could not authenticate.
+2026-06-02 12:22:50 - To: siyabongac@horsementech.com - Error: SMTP Error: Could not authenticate.
