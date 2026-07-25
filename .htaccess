@@ -1,0 +1,62 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+RewriteRule ^shop/?$ shop.php [L,QSA]
+RewriteRule ^cart/?$ cart.php [L,QSA]
+RewriteRule ^checkout/?$ checkout.php [L,QSA]
+RewriteRule ^book/?$ book.php [L,QSA]
+RewriteRule ^services/?$ services.php [L,QSA]
+RewriteRule ^barbers/?$ barbers.php [L,QSA]
+RewriteRule ^about/?$ about.php [L,QSA]
+RewriteRule ^contact/?$ contact.php [L,QSA]
+RewriteRule ^order-success/?$ order_success.php [L,QSA]
+RewriteRule ^shop/product/([^/]+)/?$ product.php?slug=$1 [L,QSA]
+RewriteRule ^product/([^/]+)/?$ product.php?slug=$1 [L,QSA]
+
+RewriteRule ^admin/?$ admin.php [L]
+RewriteRule ^admin/(.+)$ admin.php [L,QSA]
+
+RewriteRule ^customer/?$ barbershop-system/customer/login.php [L]
+RewriteRule ^customer/(.+)\.php$ barbershop-system/customer/$1.php [L,QSA]
+RewriteRule ^customer/(.+)$ barbershop-system/customer/$1 [L,QSA]
+
+<IfModule mod_headers.c>
+    Header always set Content-Security-Policy "\
+    default-src 'self';\
+    script-src 'self' 'unsafe-inline' 'unsafe-eval' \
+        https://cdn.jsdelivr.net https://code.jquery.com https://cdnjs.cloudflare.com;\
+    style-src 'self' 'unsafe-inline' \
+        https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://fonts.googleapis.com;\
+    font-src 'self' data: https://cdnjs.cloudflare.com https://fonts.gstatic.com;\
+    img-src 'self' data: https:;\
+    connect-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com;\
+    frame-src 'self';\
+    object-src 'none';\
+    base-uri 'self';\
+    form-action 'self';\
+    media-src 'self';\
+"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+</IfModule>
+
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType text/javascript "access plus 1 month"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+</IfModule>
+
+ErrorDocument 404 /404.php
+ErrorDocument 403 /403.php
+ErrorDocument 500 /500.php
