@@ -8,6 +8,10 @@
 
 A modern, professional barbershop digital platform combining a customer-facing public website with a powerful barbershop management system.
 
+<p> <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP"> <img src="https://img.shields.io/badge/Shell-121011?style=for-the-badge&logo=gnu-bash&logoColor=white" alt="Shell"> <img src="https://img.shields.io/badge/Hack-6E4AFF?style=for-the-badge&logo=hack&logoColor=white" alt="Hack"> <img src="https://img.shields.io/badge/CSS-663399?style=for-the-badge&logo=css&logoColor=white" alt="CSS"> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript"> <img src="https://img.shields.io/badge/Perl-39457E?style=for-the-badge&logo=perl&logoColor=white" alt="Perl"> </p>
+
+<p> <img src="https://img.shields.io/badge/Status-Active-success?style=for-the-badge" alt="Project Status"> <img src="https://img.shields.io/badge/Platform-Web-blue?style=for-the-badge" alt="Platform"> <img src="https://img.shields.io/badge/License-Proprietary-lightgrey?style=for-the-badge" alt="License"> </p>
+
 
 \
 
