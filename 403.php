@@ -81,7 +81,7 @@
         </div>
         <a href="/" class="btn-home"><i class="fas fa-home me-2"></i>Back to Safety</a>
         <br><br>
-        <small class="text-readable-muted">Not the boss? Try logging in first.</small>
+        <small style="color: #d1d5db;">Not the boss? Try logging in first.</small>
     </div>
 
     <div style="position:fixed; bottom:0; right:0; opacity:0.05; pointer-events:none;">

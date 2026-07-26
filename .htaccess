@@ -57,6 +57,6 @@ RewriteRule ^customer/(.+)$ barbershop-system/customer/$1 [L,QSA]
     ExpiresByType image/svg+xml "access plus 1 year"
 </IfModule>
 
-ErrorDocument 404 /404.php
-ErrorDocument 403 /403.php
-ErrorDocument 500 /500.php
+ErrorDocument 404 /pro-barber/404.php
+ErrorDocument 403 /pro-barber/403.php
+ErrorDocument 500 /pro-barber/500.php

@@ -77,7 +77,7 @@
         </div>
         <a href="/" class="btn-home"><i class="fas fa-home me-2"></i>Back to Safety</a>
         <br><br>
-        <small class="text-readable-muted">
+        <small style="color: #d1d5db;">
             If you think this is our fault, tell the boss.<br>Or just go back and pretend this never happened.
         </small>
     </div>
